@@ -1,0 +1,198 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// svg 默认样式
+.svg-icon {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none; /* 去除默认的下划线 */
+  outline: none; /* 去除旧版浏览器的点击后的外虚线框 */
+	color: #333;
+}
+
+// 超出隐藏
+.beyondHidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.one-pixel-line {
+  position: relative;
+}
+
+.one-pixel-line::after {
+  content: '';
+	width: 100%;
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  box-shadow: 0 0 0 1px #ececec;
+  transform-origin: 0 bottom;
+  transform: scaleY(0.5) translateZ(0);
+}
+
+@media (min-resolution: 2dppx) {
+  .one-pixel-line.shadow::after {
+    box-shadow: 0 0 0 0.5px #ececec;
+  }
+}
+
+@media (min-resolution: 3dppx) {
+  .one-pixel-line.shadow::after {
+    box-shadow: 0 0 0 0.333333px #ececec;
+  }
+}
+
+.dashes-line {
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    #ececec 0%,
+    #ececec 50%,
+    transparent 50%
+  );
+  background-size: 20px 10px;
+  background-repeat: repeat-x;
+}
+
+.clearfix:after
+ {
+    content: " ";
+    clear: both;
+ }
+ 
